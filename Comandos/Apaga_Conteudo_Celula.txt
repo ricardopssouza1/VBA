@@ -1,0 +1,3 @@
+'Apaga conteudo da Celula
+
+xlWorkSheet.Range("A1").Clear()
