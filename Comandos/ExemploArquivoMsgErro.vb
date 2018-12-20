@@ -19,8 +19,8 @@ Public Class ScriptMain
         On Error GoTo aviso
 
         '
-		' script
-		'
+	' script
+	'
 
         'Armazena arquivo TXT com a msg de erro
 aviso:  If Err.Number <> 0 Then
