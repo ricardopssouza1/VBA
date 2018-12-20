@@ -24,3 +24,9 @@
 - [Formatação de Bordas] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/Formatacao_Bordas.txt)
 
 - [Conexão SQL SERVER] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/Conexao_SQL_SERVER.txt)
+
+- [ConexaoExcelXSQL_Ex2] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/ScriptVBA_ConexaoExcelXSQL.vb)
+
+- [ExemploVetorVBA] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/ExemploVetorVBA.vb)
+
+- [ArquivoMsgErro] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/ExemploArquivoMsgErro.vb)
