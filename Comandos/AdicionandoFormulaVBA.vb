@@ -1,4 +1,6 @@
- ActiveSheet(1)
+'https://pt.stackoverflow.com/questions/209353/bloquear-c%C3%A9lula-preenchida-com-vba
+
+ActiveSheet(1)
 
         strSQL = "" _
                 & " SELECT   " _
