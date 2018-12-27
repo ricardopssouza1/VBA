@@ -12,8 +12,12 @@ Public Class ScriptMain
     Public xlApp As Excel.Application
     Public xlWorkbook As Excel.Workbook
     Public xlWorkSheet As Excel.Worksheet
+	
 
     Public Sub Main()
+		
+	Dim txt As String
+        Dim sw As StreamWriter
 
         ' Tratamento de erro
         On Error GoTo aviso
