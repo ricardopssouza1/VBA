@@ -29,6 +29,9 @@
         ' adicionando formula
         xlWorkSheet.Range("C2").Formula = "=SOMA(A2+B2)"
 
+        ' exemplo2
+        xlWorkSheet.Range("C2").Formula = "=IF(OR(G4="""",$B$19=0),"""",ROUND(G4/$B$19,2))"
+
 
         'AJUSTES FINAIS AUTOFIT
         xlWorkSheet.Cells.EntireColumn.AutoFit()
