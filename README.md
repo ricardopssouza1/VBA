@@ -30,3 +30,5 @@
 - [ExemploVetorVBA] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/ExemploVetorVBA.vb)
 
 - [ArquivoMsgErro] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/ExemploArquivoMsgErro.vb)
+
+- [AdicionandoFormula] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/AdicionandoFormulaVBA.vb)
