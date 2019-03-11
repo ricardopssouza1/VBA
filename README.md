@@ -32,3 +32,5 @@
 - [ArquivoMsgErro] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/ExemploArquivoMsgErro.vb)
 
 - [AdicionandoFormula] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/AdicionandoFormulaVBA.vb)
+
+- [UsoRapido] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/VBA_USO_RAPIDO.vb)
