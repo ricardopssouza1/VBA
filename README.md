@@ -33,4 +33,6 @@
 
 - [AdicionandoFormula] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/AdicionandoFormulaVBA.vb)
 
+- [ExecutaOutraDts] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/ExecutaOutraDtsVBA.vb)
+
 - [UsoRapido] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/VBA_USO_RAPIDO.vb)
