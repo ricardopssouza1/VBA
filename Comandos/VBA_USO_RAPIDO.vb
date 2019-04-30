@@ -336,6 +336,25 @@ Next I    ' to add each value of I.
 SendKeys "=", True    ' Get grand total. 
 SendKeys "%{F4}", True    ' Send ALT+F4 to close Calculator. 
 
+-- ===================
+--- FIND  
+-- ===================
+
+'Identificar um valor de uma célula já contém em um range
+'Verifica no range "A:A" tem alguma celula com o valor pesquisado
+
+Sub Find()
+    Dim value As String
+    Dim rgFound As Range
+    value = "NomePesquisado"
+    Set rgFound = Plan1.[A:A].Find(value)
+    
+    If rgFound Is Nothing Then
+        MsgBox ("Pesquisa não encontrada.")
+    Else
+        MsgBox ("Pesquisa encontrada :" & rgFound.Address)
+    End If
+End Sub
 
 
 			
