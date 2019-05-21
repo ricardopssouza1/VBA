@@ -35,4 +35,6 @@
 
 - [ExecutaOutraDts] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/ExecutaOutraDtsVBA.vb)
 
+- [ConexaoStringComTXT] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/ConexaoStringComTXT.vb)
+
 - [UsoRapido] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/VBA_USO_RAPIDO.vb)
