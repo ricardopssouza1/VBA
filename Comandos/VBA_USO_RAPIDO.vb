@@ -234,7 +234,24 @@ xlWorkSheet.Range("A1:L1").Delete()
             With xlWorkSheet.Range("A1")
                 .HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter
                 .VerticalAlignment = Excel.XlHAlign.xlHAlignCenter				
-            End With			
+            End With	
+
+-- ===================
+-- SELECT CASE
+-- ===================
+
+Dim Number 
+Number = 8
+Select Case Number
+Case 1 To 5
+MsgBox("Entre 1 e 5") 
+Case 6, 7, 8, 9
+MsgBox("Entre 6 e 8")
+Case 10    
+MsgBox("Numero é 10")
+Case Else
+MsgBox("Não está entre 1 e 10") 
+End Select
 			
 			
 -- ===================
