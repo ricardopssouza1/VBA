@@ -30,9 +30,6 @@ Partial Public Class ScriptMain
         Dim txt As String
         Dim sw As StreamWriter
 
-        ' Tratamento de erro
-        'On Error GoTo aviso
-
         StringConexao = "Data Source=LOCALHOST;User ID=sa;Password=SQL123;Initial Catalog=OLTP;Provider=SQLNCLI11.1;Auto Translate=False;"
         CaminhoArquivo = "C:\DTS\Arquivo.xls"
         OpenExcel(CaminhoArquivo)
@@ -87,7 +84,7 @@ Partial Public Class ScriptMain
         & vbNewLine & "    LEFT JOIN dbo.TMP_MUNICIPIOS b on b.CD_IBGE = a.CODMUN "
         rs = cnn.Execute(strSQL)
 
-        txt = "C:\DTS\Arquivo_notificacao.txt"
+txt = "C:\DTS\Arquivo_Texto.txt"
         sw = My.Computer.FileSystem.OpenTextFileWriter(txt, True)
         sw.WriteLine(rs.GetString())
         sw.Close()
