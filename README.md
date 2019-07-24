@@ -37,4 +37,6 @@
 
 - [ConexaoStringComTXT] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/ConexaoStringComTXT.vb)
 
+- [ExportarDadosTxt_Xls] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/ExportarDadosTxt_Xls.vb)
+
 - [UsoRapido] (https://github.com/ricardopssouza1/VBA/blob/master/Comandos/VBA_USO_RAPIDO.vb)
