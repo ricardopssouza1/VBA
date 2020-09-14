@@ -400,3 +400,40 @@ End Sub
         'fecha conexão
         rs.Close()
         cnn.Close()		
+
+-- ========================
+-- OBTEM O CAMINHO NO VB .NET
+-- ========================
+	sCaminhoCompleto = Path.GetDirectoryName(TestePath)
+	MsgBox(sCaminhoCompleto)
+
+-- ========================
+-- OBTEM EXTENSÃO NO VB .NET
+-- ========================
+	sExt = Path.GetExtension(TesteCaminho)
+      	MsgBox(sExt)
+
+-- ================================
+-- OBTEM NOME DO ARQUIVO NO VB .NET
+-- ================================
+	sNomeArquivo = Path.GetFileNameWithoutExtension(TesteCaminho)
+      	MsgBox(sNomeArquivo)
+
+-- ===============================================
+-- OBTEM A RAIZ DO DIRETORIO DO CAMINHO NO VB .NET
+-- ===============================================
+	sRaiz = Path.GetPathRoot(TesteCaminho)
+      	MsgBox(sRaiz)
+
+-- ===============================================
+-- SUBSTITUINDO A EXTENSÃO DE UM ARQUIVO NO VB.NET
+-- ===============================================
+	xmlExt = Path.ChangeExtension(TesteCaminho, "xml")
+      	MsgBox(xmlExt)
+
+-- ==========================================
+-- CRIANDO UM ARQUIVO DE NOME ÚNICO NO VB.NET
+-- ==========================================
+      Dim sArqTemp As String = Path.GetTempFileName()
+      MsgBox(sArqTemp)
+
