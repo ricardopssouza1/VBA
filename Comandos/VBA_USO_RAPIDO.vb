@@ -457,10 +457,10 @@ End Sub
 Imports System.Net.Mail
 Dim client As WebClient = New WebClient
 client.Credentials = New NetworkCredential(UsuarioFTP, SenhaFtp)
-client.DownloadFile("C:\PASTAORIGEM\", "C:\PASTADESTINO")
+client.DownloadFile("ftp://xxx.xxx.xxx.xxx./PASTA1/PASTA2/", "C:\PASTADESTINO")
 
 -- ==========================================
--- LIMPA ARQUIVO DO DIRETORIO
+-- LIMPA ARQUIVOS DO DIRETORIO
 -- ==========================================
 Imports System.IO
 Dim dir As New DirectoryInfo("C:\PASTAORIGEM\")
