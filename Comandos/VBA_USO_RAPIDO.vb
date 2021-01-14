@@ -437,3 +437,67 @@ End Sub
       Dim sArqTemp As String = Path.GetTempFileName()
       MsgBox(sArqTemp)
 
+-- ==========================================
+-- DELETAR ARQUIVO EM PASTA FTP
+-- ==========================================
+Imports System.Net.Mail
+Imports System.Net
+Imports System.IO
+Public Sub DeletarFtp(ByVal Arquivo As String, ByVal Usuario As String, ByVal Senha As String)
+     Dim filename As String = "ftp://xxx.xxx.xxx.xxx/" & Arquivo
+     Dim ftpReq As FtpWebRequest = WebRequest.Create(filename)
+     ftpReq.Method = WebRequestMethods.Ftp.DeleteFile
+     ftpReq.Credentials = New NetworkCredential(Usuario, Senha)
+     Dim ftpResp As FtpWebResponse = ftpReq.GetResponse
+End Sub
+
+-- ==========================================
+-- BAIXA ARQUIVO DO FTP
+-- ==========================================
+Imports System.Net.Mail
+Dim client As WebClient = New WebClient
+client.Credentials = New NetworkCredential(UsuarioFTP, SenhaFtp)
+client.DownloadFile("C:\PASTAORIGEM\", "C:\PASTADESTINO")
+
+-- ==========================================
+-- LIMPA ARQUIVO DO DIRETORIO
+-- ==========================================
+Imports System.IO
+Dim dir As New DirectoryInfo("C:\PASTAORIGEM\")
+Dim arquivos As IEnumerable(Of FileInfo) = dir.EnumerateFiles("*.zip")
+For Each arq As FileInfo In arquivos
+File.Delete(arq.FullName)
+Next
+
+
+-- ==========================================
+-- DESCOMPACTA ARQUIVO EM UM DIRETORIO
+-- ==========================================
+Imports System.IO.Compression
+If System.IO.File.Exists("C:\PASTAORIGEM\") Then
+ZipFile.ExtractToDirectory("C:\PASTAORIGEM\", "C:\PASTADESTINO\")
+End If
+
+
+-- ==========================================
+-- SUB PARA DISPARAR EMAIL
+-- ==========================================
+    Private Sub SendMailMessage(
+    ByVal From As String, ByVal SendTo As String,
+    ByVal Subject As String, ByVal Body As String,
+    ByVal IsBodyHtml As Boolean, ByVal Server As String)
+
+        Dim htmlMessage As MailMessage
+        Dim mySmtpClient As SmtpClient
+
+        htmlMessage = New MailMessage(From, SendTo, Subject, Body)
+        htmlMessage.IsBodyHtml = IsBodyHtml
+        mySmtpClient = New SmtpClient(Server)
+        mySmtpClient.Credentials = CredentialCache.DefaultNetworkCredentials
+        mySmtpClient.Send(htmlMessage)
+
+    End Sub
+
+EXEMPLO:
+
+SendMailMessage(emailRemetente, emailDestinatario, assuntoMensagem, conteudoMensagem, True, smtpServer)
