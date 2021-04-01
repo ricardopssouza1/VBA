@@ -501,3 +501,40 @@ End If
 EXEMPLO:
 
 SendMailMessage(emailRemetente, emailDestinatario, assuntoMensagem, conteudoMensagem, True, smtpServer)
+
+
+-- ==========================================
+-- EXECUTA POWERSHELL NO VB
+-- ==========================================
+
+' EXEMPLO 1
+
+	Dim D As New Process
+        With D
+            .StartInfo.WorkingDirectory = (Environ("SystemRoot") & "\system32\WindowsPowerShell\v1.0")
+            .StartInfo.FileName = "powershell.exe"
+            .StartInfo.Arguments = ("-executionpolicy bypass -File " & ("""C:\Scripts\renomeia.ps1" & """"))
+            .StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            .Start()
+            .WaitForExit()
+
+
+' EXEMPLO 2
+
+        'criar o arquivo powershell e escreve o codigo desejado e salva em temp
+        IO.File.WriteAllText(IO.Path.GetTempPath & "x.ps1", "Install-WindowsFeature - Name FS-Resource-Manager -IncludeManagementTools")
+
+        'executa o scrypt powershell
+        Dim D As New Process
+        With D
+            .StartInfo.WorkingDirectory = (Environ("SystemRoot") & "\system32\WindowsPowerShell\v1.0")
+            .StartInfo.FileName = "powershell.exe"
+            .StartInfo.Arguments = ("-executionpolicy bypass -File " & ("""" & IO.Path.GetTempPath & "x.ps1" & """"))
+            .StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+            .Start()
+            .WaitForExit()
+            .Dispose()
+        End With
+
+            .Dispose()
+        End With
